@@ -29,3 +29,8 @@ HEADERS +=  $$PWD/lib$${TARGET}/global.h \
             $$PWD/lib$${TARGET}/resolver.h \
             $$PWD/lib$${TARGET}/genericzero.h \
             $$PWD/lib$${TARGET}/dubozero.h
+
+win32{
+# XXX because zero does not abstract bonjour correctly... and this is really shitty
+    copyToDestdir($$PWD/../third-party/bonjour-win/include/*.h, $$DESTDIR/../include)
+}

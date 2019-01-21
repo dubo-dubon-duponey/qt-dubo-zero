@@ -52,6 +52,9 @@ int mainNoJavascript(int argc, char *argv[])
     // Get your app going
     QApplication app(argc, argv);
 
+    // Instanciate
+    new Zero();
+
     // From QT side
     QWidget * w = new QWidget();
     w->show();
@@ -62,35 +65,20 @@ int mainNoJavascript(int argc, char *argv[])
     return app.exec();
 }
 
-void inject(QWebChannel * channel){
-    // Instanciate the notifier
-    // XXX DuboZero::Notifier * notifier = new DuboZero::Notifier(channel);
-
-    // Attach objects to the javascript context
-    DuboZero::Root * root = new DuboZero::Root();
-    channel->registerObject("Root", root);
-    // XXX channel->registerObject("Notifier", notifier);
-}
-
 int mainJavascript(int argc, char *argv[])
 {
     // Get your app going
     QApplication app(argc, argv);
 
-    // Display the webview
-    QWebChannel * chan = SetupWebView();
-
-    // Instanciate the notifier
-    // XXX DuboZero::Notifier * notifier = new DuboZero::Notifier(chan);
-
     // Instanciate
     new Zero();
 
+    // Display the webview
+    QWebChannel * chan = SetupWebView();
 
     // Attach objects to the javascript context
     DuboZero::Root * root = new DuboZero::Root();
     chan->registerObject("Root", root);
-    // XXX chan->registerObject("Notifier", notifier);
 
     return app.exec();
 }

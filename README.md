@@ -39,3 +39,6 @@ XXX
 ## Gotchas
 
 XXX
+
+Largely borrowed from: http://doc.qt.digia.com/qq/qq23-bonjour.html
+

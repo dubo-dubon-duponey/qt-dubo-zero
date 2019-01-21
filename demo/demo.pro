@@ -28,3 +28,9 @@ mac{
 
 HEADERS += zero.h
 SOURCES += zero.cpp
+
+# Shitty right now
+#win32{
+#    INCLUDEPATH += C:\somewhere\trees\bonjour\include
+#    LIBS += -LC:\somewhere\trees\bonjour\lib
+#}

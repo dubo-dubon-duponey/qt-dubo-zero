@@ -81,5 +81,5 @@ void Zero::resolveCompleteSlot(const QHostInfo & qhi,int port)
 
 void Zero::registeredSlot(const Record &)
 {
-    qDebug() << "Yeah, we registered";
+    qDebug() << "Yeah, we registered ourselves properly. Kind of cool.";
 }
