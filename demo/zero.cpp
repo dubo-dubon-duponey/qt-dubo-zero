@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2019, Dubo Dubon Duponey <dubodubonduponey+github@pm.me>
  * All rights reserved.
  *
@@ -20,9 +20,9 @@ Zero::Zero(QObject *parent) :
     QObject(parent)
 {
     // Service type
-    QString serviceType = QString("_dubo._tcp");
+    QString serviceType = QString::fromLatin1("_dubo._tcp");
     // Service name
-    QString sayMyNameBaby = QString("Raymond");
+    QString sayMyNameBaby = QString::fromLatin1("Raymond");
 
     // Take a port (XXX should really be your service port)
     int high = 50000;
@@ -34,7 +34,7 @@ Zero::Zero(QObject *parent) :
     // Call upon the registrar
     registrar = new Registrar(this);
     // Create our record (name+hostname+port, type)
-    Record ourselves = Record(sayMyNameBaby.append(QHostInfo::localHostName()).append(QString::number(port)), serviceType, "");
+    Record ourselves = Record(sayMyNameBaby.append(QHostInfo::localHostName()).append(QString::number(port)), serviceType, QString::fromLatin1(""));
     // And register ourselves
     registrar->registerService(ourselves, static_cast<quint16>(port));
     // Connect to be notified that registration went through

@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2019, Dubo Dubon Duponey <dubodubonduponey+github@pm.me>
  * All rights reserved.
  *
@@ -13,9 +13,7 @@
 #define DUBOZERO_ZEROHELLO_RECORD_H
 
 #include "libdubozero/global.h"
-
 #include <QObject>
-//#include <QVariant>
 
 namespace DuboZero {
 
@@ -52,9 +50,5 @@ public:
 };
 
 }
-
-
-//Q_DECLARE_METATYPE(DuboZero::Record)
-
 
 #endif // DUBOZERO_ZEROHELLO_RECORD_H

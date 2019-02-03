@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2019, Dubo Dubon Duponey <dubodubonduponey+github@pm.me>
  * All rights reserved.
  *
@@ -20,8 +20,6 @@
 #include <QSocketNotifier>
 #include <QDebug>
 #include <QObject>
-
-#include <dns_sd.h>
 
 namespace DuboZero {
 

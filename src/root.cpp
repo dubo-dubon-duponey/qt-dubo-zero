@@ -10,53 +10,55 @@
  */
 
 #include "libdubozero/root.h"
+#include <dns_sd.h>
+#include <dns_util.h>
 
 /*! \cond */
 
 namespace DuboZero{
 
 const QString Root::getName(){
-    return PROJECT_NAME;
+    return QString::fromUtf8(PROJECT_NAME);
 }
 
 const QString Root::getVendor(){
-    return PROJECT_VENDOR;
+    return QString::fromUtf8(PROJECT_VENDOR);
 }
 
 const QString Root::getVersion(){
-    return VERSION_FULL;
+    return QString::fromUtf8(VERSION_FULL);
 }
 
 const QString Root::getRevision(){
-    return VERSION_GIT;
+    return QString::fromUtf8(VERSION_GIT);
 }
 
 const QString Root::getChangeset(){
-    return VERSION_CHANGE;
+    return QString::fromUtf8(VERSION_CHANGE);
 }
 
 const QString Root::getBuildType(){
-    return PROJECT_BUILDTYPE;
+    return QString::fromUtf8(PROJECT_BUILDTYPE);
 }
 
 const QString Root::getLinkType(){
-    return PROJECT_LINKTYPE;
+    return QString::fromUtf8(PROJECT_LINKTYPE);
 }
 
 const QString Root::getQt(){
-    return QT_VERSION_STR;
+    return QString::fromLatin1(QT_VERSION_STR);
 }
 
 const QString Root::getLibName(){
-    return "";
+    return QString::fromLatin1("bonjour");
 }
 
 const QString Root::getLibVersion(){
-    return "";
+    return QString(_DNS_SD_H);
 }
 
 const QString Root::getLibRevision(){
-    return "";
+    return QString(_DNS_SD_H);
 }
 
 }
