@@ -35,10 +35,5 @@
         <string>en</string>
         <key>CFBundleInfoDictionaryVersion</key>
         <string>6.0</string>
-
-        <!-- DuboZero demo specific configuration -->
-        <key>NSUserNotificationAlertStyle</key>
-        <string>alert</string>
-
     </dict>
 </plist>

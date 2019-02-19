@@ -11,7 +11,6 @@
 
 #include "libdubozero/root.h"
 #include <dns_sd.h>
-#include <dns_util.h>
 
 /*! \cond */
 

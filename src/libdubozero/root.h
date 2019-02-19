@@ -11,15 +11,6 @@
 
 /*!
 \mainpage
-Provides a QT wrapper to handle macOS notifications.
-Both the main Notifier and Notification objects can be injected into a webkit webview, and used entirely from JavaScript.
-
-The Notifier object controls notification creation, dispatching, and handles signals back when the user interacts with notifications.
-
-The Notification object fully expose macOS notification API through properties.
-
-Signals may be received for notifications that have been sent before the app itself launched (assuming your app does not remove all notifications on quit).
-In that case, the signaled notification will not hold all previously set properties (title, informative text, sound).
 
 This code is distributed under the terms of the BSD license.
 */
