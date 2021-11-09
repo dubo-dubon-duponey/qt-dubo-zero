@@ -12,7 +12,11 @@
 #include "zero.h"
 #include <libdubozero/browser.h>
 #include <libdubozero/registrar.h>
+#if QT_VERSION < QT_VERSION_CHECK( 5, 10, 0 )
 #include <QTime>
+#else
+#include <QRandomGenerator>
+#endif
 
 using namespace DuboZero;
 
@@ -27,9 +31,13 @@ Zero::Zero(QObject *parent) :
     // Take a port (XXX should really be your service port)
     int high = 50000;
     int low = 8080;
+#if QT_VERSION < QT_VERSION_CHECK( 5, 10, 0 )
     QTime time = QTime::currentTime();
     qsrand(static_cast<uint>(time.msec()));
     int port = qrand() % ((high + 1) - low) + low;
+#else
+    int port = QRandomGenerator::global()->generate() % ((high + 1) - low) + low;
+#endif
 
     // Call upon the registrar
     registrar = new Registrar(this);
